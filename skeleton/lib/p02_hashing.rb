@@ -4,6 +4,18 @@ end
 
 class Array
   def hash
+    if self.empty?
+        0
+    end
+    var = 1
+    j = 1
+    i = self.length-1
+    while i > -1
+        var += self[i] * j
+        j *= 10
+        i -= 1
+    end
+    var
   end
 end
 
